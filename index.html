@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <script type="text/JavaScript" src="./js/zadanie.js"></script>
+</head>
+
+<body>
+
+    <nav class='navbar navbar-default'>
+        <div class='container'>
+            <div class="navbar-header">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+            <div class='page-header'>
+                <h2>FORM BUILDER</h2>
+            </div>
+
+            <div class='panel'>
+                <div class='panel-body'>
+                    <form action="#" method="post">
+                        <div class="form one">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg"> Do you own a car? </div>
+                            </div>
+                            <div class="rowField">
+
+                                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" /> <span> Yes </span>
+                                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" /> <span> No </span>
+                            </div>
+                        </div>
+                        <div class="form one-car" style="display: none;">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg"> What is your car's model?</div>
+                            </div>
+                            <div class="rowField">
+                                <select class="carbrand form-control form-control-lg" onchange="ford()">
+                                     <option  disabled selected value >car brand</option>
+                                     <option value="toyota">Toyota</option>
+                                     <option value="ford">Ford</option>
+                                     <option value="others">others</option>
+                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="form one-car__ford" style="display: none;">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg"> What color is your Ford? </div>
+                            </div>
+                            <div class="rowField">
+                                <input type="text" class='form-control' id='name'>
+                            </div>
+
+                        </div>
+
+                        <div class="form one-car__fordd" style="display: none;">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg">How many wheels on your Ford?</div>
+                            </div>
+                            <div class="rowField wheel-icons">
+                                <input type="number" class="wheelnr form-control form-control-lg" placeholder="digit">
+                                <button type="button" class="icon-wheel" onclick="javascript:wheel()"> <i class="glyphicon glyphicon-chevron-right"></i></button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form one-car__fordnr wheel" style="display: none;">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg">Is your Ford road legal?</div>
+                            </div>
+                            <div class="rowField">
+                                <input type="radio" name="yesno" id="yesCheck" /> <span> Yes </span>
+                                <input type="radio" name="yesno" id="noCheck" /> <span> No </span>
+                            </div>
+
+                        </div>
+
+                        <div class="form one-car__toyota" style="display: none;">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg">Has your Toyota been recalled?</div>
+                            </div>
+                            <div class="rowField">
+                                <input type="radio" name="yesno" id="yesCheck" /> <span> Yes </span>
+                                <input type="radio" name="yesno" id="noCheck" /> <span> No </span>
+                            </div>
+
+
+                        </div>
+                        <div class="form two">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg">What year was your building built?</div>
+                            </div>
+                            <div class="rowField">
+
+                                <input type="number" class="form-control form-control-lg">
+                            </div>
+
+
+                        </div>
+                        <div class="form three">
+                            <div class="rowTab">
+                                <div class="form-control form-control-lg"> What's your company name?</div>
+                            </div>
+                            <div class="rowField">
+
+                                <input type="text" class='form-control' id='name'>
+                            </div>
+
+                        </div>
+
+
+                        <div class="button-end">
+                            <button class='btn btn-primary'>Add Input</button>
+                        </div>
+                        <div class="info-container">
+                            <div class="error-message">
+                            </div>
+                            <div class="success-message">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
