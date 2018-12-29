@@ -1,5 +1,3 @@
-
-
 function yesnoCheck() {
     if (document.getElementById('yesCheck').checked) {
         document.querySelector('.one-car').style.display = 'block';
@@ -20,60 +18,34 @@ function ford() {
         document.querySelector('.one-car__ford').style.display = 'none';
         document.querySelector('.one-car__fordd').style.display = 'none';
     }
-    if (val === "Toyota"){
+    if (val === "Toyota") {
         document.querySelector('.one-car__toyota').style.display = 'block';
-    }else {
+    } else {
         document.querySelector('.one-car__toyota').style.display = 'none';
-}
+    }
 }
 
-function wheel(){
-
+function wheel() {
     var wheels = document.querySelector(".wheelnr").value;
-    if (wheels > 4){
+    if (wheels > 4) {
         document.querySelector('.one-car__fordnr').style.display = 'block';
-    }else{
+    } else {
         document.querySelector('.one-car__fordnr').style.display = 'none';
-}
+    }
 }
 
 $(document).ready(function() {
+    $(".form").submit(function(e) {
 
-$(".form").submit(function(e) {
-    var formURL = $('form').attr('action');
-$.ajax({
+        $.ajax({
             type: 'POST',
-            url:formURL,
+            url: "http://demo3072981.mockable.io/magda",
             data: $(".form").serialize(),
             success: function(data) {
                 console.log(data);
             }
 
-
-                    });
-
-
-
-
-e.preventDefault();
+        });
+        e.preventDefault();
+    })
 })
-})
-// document.addEventListener("DOMContentLoaded", function() {
-//     var form = document.querySelector('form');
-//     var errors = document.querySelector('.error-message');
-//
-//     form.addEventListener("submit", function(e) {
-//
-//         e.preventDefault();
-//
-//         errors.innerHTML = "";
-//
-//         var valid = true;
-//
-//         if (valid) {
-//                     form.submit();
-//                 }
-//
-//             })
-//
-//         });

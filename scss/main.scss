@@ -1,0 +1,51 @@
+
+.page-header {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    margin: 5px;
+    &-buttons {
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px;
+    }
+}
+
+.rowTab {
+    margin: 10px;
+}
+
+.rowField {
+    margin: 10px;
+}
+
+.rowField input {
+    padding: 5px;
+}
+
+.wheel-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=radio] {
+    margin: 4px !important;
+    width: 16px;
+    height: 16px;
+}
+
+
+.btn {
+    margin: 5px;
+}
+
+.button-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+::placeholder{
+    font-size: 10px;
+}
